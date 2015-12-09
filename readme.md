@@ -1,4 +1,3 @@
 contributors:
 caillard alexandre
-Valentin Lablanche : Le meilleur
-=================================
+Valentin Lablanche
