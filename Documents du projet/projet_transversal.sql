@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 20 Janvier 2016 à 11:37
+-- Généré le :  Mer 20 Janvier 2016 à 14:06
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -52,10 +52,10 @@ CREATE TABLE IF NOT EXISTS `message` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `messagerie`
+-- Structure de la table `messaging`
 --
 
-CREATE TABLE IF NOT EXISTS `messagerie` (
+CREATE TABLE IF NOT EXISTS `messaging` (
   `ID_Messagerie` int(11) NOT NULL AUTO_INCREMENT,
   `fk_ID_Users` int(11) NOT NULL,
   `fk_ID_Conversation` int(11) DEFAULT NULL,
@@ -94,11 +94,11 @@ ALTER TABLE `message`
   ADD CONSTRAINT `message_ibfk_1` FOREIGN KEY (`fk_ID_Users`) REFERENCES `users` (`ID_Users`);
 
 --
--- Contraintes pour la table `messagerie`
+-- Contraintes pour la table `messaging`
 --
-ALTER TABLE `messagerie`
-  ADD CONSTRAINT `messagerie_ibfk_1` FOREIGN KEY (`fk_ID_Users`) REFERENCES `users` (`ID_Users`),
-  ADD CONSTRAINT `messagerie_ibfk_2` FOREIGN KEY (`fk_ID_Conversation`) REFERENCES `conversation` (`ID_Conversation`);
+ALTER TABLE `messaging`
+  ADD CONSTRAINT `messaging_ibfk_1` FOREIGN KEY (`fk_ID_Users`) REFERENCES `users` (`ID_Users`),
+  ADD CONSTRAINT `messaging_ibfk_2` FOREIGN KEY (`fk_ID_Conversation`) REFERENCES `conversation` (`ID_Conversation`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

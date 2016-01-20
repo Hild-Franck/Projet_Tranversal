@@ -6,12 +6,12 @@ Pass TEXT NOT NULL,
 PRIMARY KEY (ID_Users)
 );
 
-CREATE TABLE Messagerie
+CREATE TABLE Messaging
 (
-ID_Messagerie INT NOT NULL AUTO_INCREMENT,
+ID_Messaging INT NOT NULL AUTO_INCREMENT,
 fk_ID_Users INT NOT NULL,
 fk_ID_Conversation INT,
-PRIMARY KEY (ID_Messagerie),
+PRIMARY KEY (ID_Messaging),
 FOREIGN KEY (fk_ID_Users) REFERENCES Users(ID_Users),
 FOREIGN KEY (fk_ID_Conversation) REFERENCES Conversation(ID_Conversation)
 );
