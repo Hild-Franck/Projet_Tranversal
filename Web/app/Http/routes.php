@@ -14,18 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('/inscription', 'LoginController@inscription');
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| This route group applies the "web" middleware group to every route
-| it contains. The "web" middleware group is defined in your HTTP
-| kernel and includes session state, CSRF protection, and more.
-|
-*/
+Route::post('/connection', 'LoginController@connection');
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
+Route::post('/delete', 'LoginController@delete');
+
+Route::get('/{user}/messenger', 'MessengerController@getConversations');
+
+Route::get('/{user}/conversation/{conversationId}', 'ConversationController@participate');
+
+Route::get('/{user}/conversation/create', 'ConversationController@create');
+
+Route::get('/{user}/conversation/delete', 'ConversationController@delete');
