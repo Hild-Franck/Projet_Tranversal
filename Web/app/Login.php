@@ -7,9 +7,9 @@
  */
 
 namespace App;
+use Illuminate\Database\Eloquent\Model;
 
-
-class Login
-{
-
+class Login{
+    protected $table = 'logins';
+    protected $primaryKey = 'id';
 }

@@ -7,9 +7,9 @@
  */
 
 namespace App;
+use Illuminate\Database\Eloquent\Model;
 
-
-class Message
-{
-
+class Message{
+    protected $table = 'messages';
+    protected $primaryKey = 'id';
 }

@@ -7,9 +7,21 @@
  */
 
 namespace App;
+use Illuminate\Database\Eloquent\Model;
 
 
-class Conversation
-{
+class Conversation extends Model{
+    protected $table = 'conversations';
+    protected $primaryKey = 'id';
+    public function getUsersList(){
 
+    }
+
+    public function changeTitle(){
+
+    }
+
+    public function addMessage(){
+
+    }
 }
