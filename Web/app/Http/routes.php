@@ -22,8 +22,8 @@ Route::post('/delete', 'LoginController@delete');
 
 Route::get('/{user}/messenger', 'MessengerController@getConversations');
 
-Route::get('/{user}/conversation/{conversationId}', 'ConversationController@participate');
+Route::post('/{user}/conversation/{conversationId}', 'ConversationController@participate');
 
-Route::get('/{user}/conversation/create', 'ConversationController@create');
+Route::post('/{user}/conversation/create', 'ConversationController@create');
 
-Route::get('/{user}/conversation/delete', 'ConversationController@delete');
+Route::post('/{user}/conversation/delete', 'ConversationController@delete');
