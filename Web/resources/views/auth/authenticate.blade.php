@@ -1,4 +1,4 @@
-<!-- resources/views/auth/login.blade.php -->
+<!-- resources/views/auth/authenticate.blade.php -->
 
 <form method="POST" action={{'/connection'}}>
     {!! csrf_field() !!}
