@@ -38,7 +38,8 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <h1>Inscription</h1>
+                <form method="post" action={{url('/inscription')}}></form>
             </div>
         </div>
     </body>

@@ -1,9 +1,22 @@
 <?php
-
 namespace App;
-use Illuminate\Database\Eloquent\Model;
-
-class User extends Model{
-    protected $table = 'users';
-    protected $primaryKey = 'id';
+use Illuminate\Foundation\Auth\User as Authenticatable;
+class User extends Authenticatable
+{
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'username', 'password',
+    ];
+    /**
+     * The attributes excluded from the model's JSON form.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
 }

@@ -9,7 +9,6 @@
 namespace App\Http\Controllers;
 
 
-class LoginController
-{
+class UserController extends Controller{
 
 }

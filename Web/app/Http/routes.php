@@ -14,11 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post('/inscription', 'LoginController@inscription');
+Route::get('/inscription', 'Auth\AuthController@getRegister');
 
-Route::post('/connection', 'LoginController@connection');
+Route::post('/inscription', 'Auth\AuthController@postRegister');
 
-Route::post('/delete', 'LoginController@delete');
+Route::get('/connection', 'Auth\AuthController@getLogin');
+
+Route::post('/connection', 'Auth\AuthController@postLogin');
+
+Route::post('/delete', 'UserController@delete');
 
 Route::get('/{user}/messenger', 'MessengerController@getConversations');
 
