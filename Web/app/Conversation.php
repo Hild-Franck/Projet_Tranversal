@@ -8,20 +8,15 @@
 
 namespace App;
 use Illuminate\Database\Eloquent\Model;
+use App\Message;
 
 
 class Conversation extends Model{
     protected $table = 'conversations';
     protected $primaryKey = 'id';
-    public function getUsersList(){
 
-    }
-
-    public function changeTitle(){
-
-    }
-
-    public function addMessage(){
-
+    public function changeTitle($newTitle){
+        $this->title = $newTitle;
+        $this->save();
     }
 }

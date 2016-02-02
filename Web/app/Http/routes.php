@@ -24,6 +24,8 @@ Route::get('/{user}/messenger', 'MessengerController@getConversations');
 
 Route::post('/{user}/conversation/{conversationId}', 'ConversationController@participate');
 
+Route::post('/{user}/conversation/{conversationId}/add-message', 'ConversationController@addMessage');
+
 Route::post('/{user}/conversation/create', 'ConversationController@create');
 
 Route::post('/{user}/conversation/delete', 'ConversationController@delete');
